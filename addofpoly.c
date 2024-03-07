@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
+//making a polynomial function for lsit
 struct node
 {
     float coefficient;
@@ -23,28 +24,31 @@ struct node *create(struct node *head)
     }
     return head;
 }
-struct node *insert(struct node*head,  float coeff, int expo)
+struct node *insert(struct node *head, float coeff, int expo)
 {
     struct node *temp;
-    struct node* newp = malloc(sizeof(struct node));
-    newp->coefficient= coeff;
-    newp->exponent= expo;
-    newp->link= NULL;
+    struct node *newp = malloc(sizeof(struct node));
+    newp->coefficient = coeff;
+    newp->exponent = expo;
+    newp->link = NULL;
 
-    if (head== NULL|| expo>head->exponent)
+    if (head == NULL || expo > head->exponent)
     {
-        newp->link= head;
-        head= newp;
-    }else{
+        newp->link = head;
+        head = newp;
+    }
+    else
+    {
         temp = head;
-        while(temp->link!=NULL&&temp->link->exponent>=expo)
-        temp=temp->link;
-        newp->link=temp->link;
-        temp->link= newp;
-    }return head;
-    ds
-    
-
-
+        while (temp->link != NULL && temp->link->exponent >= expo)
+            temp = temp->link;
+        newp->link = temp->link;
+        temp->link = newp;
+    }
+    return head;
 }
-
+int main()
+{
+    int a; 
+    printf("enter the data");
+}
